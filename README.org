@@ -1,0 +1,11 @@
+* Nix Templates
+
+A collection of personal nix flake templates.
+
+** Usage
+
+Substitute =<template>= with the desired template.
+
+#+begin_src sh
+  nix flake init -t codeberg:chr-sa/templates#<template>
+#+end_src
