@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypackage"
+authors = [
+    {name = "chr-sa", email = "chr-sa@noreply.codeberg.org"},
+]
+description = "My package description"
+requires-python = ">=3.10"
+dependencies = [
+]
+dynamic = ["version"]
+
+[project.scripts]
+mypackage = "main:main"
