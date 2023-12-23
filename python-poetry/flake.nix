@@ -6,8 +6,9 @@
     let
       forAllSystems = function:
         nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-darwin" ]
-        (system: function nixpkgs.legacyPackages.${system});
-    in {
+          (system: function nixpkgs.legacyPackages.${system});
+    in
+    {
       devShells = forAllSystems (pkgs: {
         default = pkgs.mkShell {
           packages = [ pkgs.python3 pkgs.poetry ];

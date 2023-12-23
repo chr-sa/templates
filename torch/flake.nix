@@ -17,7 +17,8 @@
           numpy
           mlflow
         ];
-    in {
+    in
+    {
       devShells = forAllSystems (pkgs: {
         default = pkgs.mkShell {
           packages = [ (pkgs.python3.withPackages pythonPackages) ];

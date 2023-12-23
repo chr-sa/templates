@@ -6,7 +6,8 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pythonPackages = p: with p; [ numpy ];
-    in {
+    in
+    {
       devShells.${system}.default = pkgs.mkShell {
         packages = [ (pkgs.python310.withPackages pythonPackages) ];
       };
@@ -17,8 +18,8 @@
         src = ./.;
         format = "pyproject";
         postInstall = ''
-            ln -s $out/bin/${name} $out/bin/python3.10-${name}
-          '';
+          ln -s $out/bin/${name} $out/bin/python3.10-${name}
+        '';
       };
     };
 }
