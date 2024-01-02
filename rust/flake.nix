@@ -10,12 +10,15 @@
   in {
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
-        packages = [
-          pkgs.cargo
-          pkgs.rustc
-          pkgs.rust-analyzer
-          pkgs.rustfmt
-          pkgs.pkg-config
+        packages = with pkgs; [
+          cargo
+          rustc
+          rustup
+
+          rust-analyzer
+          rustfmt
+
+          pkg-config
         ];
 
         RUST_BACKTRACE = "full";
