@@ -26,7 +26,7 @@
       default = pkgs.mkShell {
         buildInputs = with pkgs; [
           pkg-config
-          rust-bin.beta.latest.default
+          rust-bin.stable.latest.default
         ];
       };
     });
