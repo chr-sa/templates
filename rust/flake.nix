@@ -13,7 +13,6 @@
         packages = with pkgs; [
           cargo
           rustc
-          rustup
 
           rust-analyzer
           rustfmt
